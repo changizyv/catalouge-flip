@@ -1,0 +1,139 @@
+/* /css/book.css
+   استایل ساختار کتاب و صفحات
+   نسخهٔ اصلاح‌شده:
+   - فعال‌سازی ورق با ماوس/لمس (pointer-events, touch-action, cursor)
+*/
+
+:root {
+  --page-width: 1200px;
+  --page-height: 1697px;
+  --page-bg: #fffdfa;
+  --page-shadow: rgba(0, 0, 0, 0.1);
+  --page-border: rgba(0, 0, 0, 0.06);
+  --text-color: #222;
+  --muted: #666;
+  --accent: #c62828;
+}
+
+/* کتاب */
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  /* --- افزوده‌ها برای تعامل بهتر --- */
+  pointer-events: auto;   /* دریافت رویدادهای موس/لمس */
+  touch-action: pan-y;    /* اجازه اسکرول عمودی، تداخل کمتر با درگ افقی */
+  cursor: grab;           /* نشانگر مناسب برای درگ */
+}
+
+/* صفحات */
+.page {
+  width: var(--page-width);
+  height: var(--page-height);
+  background: var(--page-bg);
+  color: var(--text-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--page-border);
+  border-right: 1px solid var(--page-border);
+}
+
+.page-inner {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 32px 40px;
+  height: 100%;
+}
+
+.page-head h1,
+.page-head h2 {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.page-head .subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0;
+}
+
+.page-body {
+  line-height: 1.7;
+}
+
+.page-body p {
+  margin: 0 0 1rem;
+}
+
+.page-body .features {
+  margin: 0.5rem 0 0;
+  padding: 0 1rem;
+}
+
+.page-body .features li {
+  margin: 0.25rem 0;
+}
+
+.page-foot {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* تصویر اصلی */
+.hero-image {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.hero-image figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* گالری محصول */
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.product-gallery figure {
+  width: calc(50% - 0.5rem);
+  cursor: zoom-in;
+  text-align: center;
+
+  /* برای حس تعاملی‌تر در همین صفحه */
+  transition: transform 0.2s ease;
+}
+.product-gallery figure:hover {
+  transform: scale(1.03);
+}
+.product-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.product-gallery figcaption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+/* نشانگر مناسب روی صفحات turn */
+.turn-page {
+  cursor: grab;
+}

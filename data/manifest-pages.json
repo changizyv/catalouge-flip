@@ -1,0 +1,32 @@
+{
+  "display": "double",
+  "direction": "rtl",
+  "pages": [
+    {
+      "page": 1,
+      "title": "صفحهٔ اول - معرفی برند",
+      "src": "pages/01.html",
+      "thumb": "assets/images/thumbs/01.png"
+    },
+    {
+      "page": 2,
+      "title": "صفحهٔ دوم - محصولات ویژه",
+      "src": "pages/02.html",
+      "thumb": "assets/images/thumbs/02.png"
+    },
+        {
+      "page": 3,
+      "title": "صفحهٔ سوم - محصولات ویژه",
+      "src": "pages/03.html",
+      "thumb": "assets/images/thumbs/03.png"
+    },
+        {
+      "page": 4,
+      "title": "صفحهٔ چهارم - محصولات ویژه",
+      "src": "pages/04.html",
+      "thumb": "assets/images/thumbs/04.png"
+    }
+  ]
+}
+
+

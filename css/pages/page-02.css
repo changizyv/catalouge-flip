@@ -1,0 +1,32 @@
+/* /css/pages/page-02.css
+   استایل اختصاصی صفحه 02 (محصولات ویژه)
+*/
+
+.page[data-page="2"] {
+  background: #ffffff;
+}
+
+.page[data-page="2"] .page-head h2 {
+  font-size: 2rem;
+  color: #1976d2; /* آبی تیره */
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.page[data-page="2"] .subtitle {
+  color: #555;
+  font-size: 1rem;
+}
+
+.page[data-page="2"] .product-gallery {
+  justify-content: center;
+}
+
+.page[data-page="2"] .product-gallery figure {
+  transition: transform 0.3s ease;
+}
+
+.page[data-page="2"] .product-gallery figure:hover {
+  transform: scale(1.05);
+}

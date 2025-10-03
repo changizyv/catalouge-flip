@@ -1,0 +1,31 @@
+/* /css/pages/page-01.css
+   استایل اختصاصی صفحه 01 (معرفی برند)
+*/
+
+/* فقط روی صفحه‌ای اعمال شود که data-page="1" دارد */
+.page[data-page="1"] {
+  background: #fffdfa url("../../assets/images/full/bg-texture.jpg") repeat; /* اگر خواستی بافت پس‌زمینه */
+}
+
+/* هدر این صفحه خاص */
+.page[data-page="1"] .page-head h1 {
+  font-size: 2.2rem;
+  color: #b71c1c; /* قرمز تیره */
+  text-transform: uppercase;
+}
+.page[data-page="1"] .page-head .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* تصویر شاخص صفحه اول */
+.page[data-page="1"] .hero-image img {
+  border: 3px solid #b71c1c;
+}
+
+/* ویژگی‌ها */
+.page[data-page="1"] .features li::before {
+  content: "★";
+  color: #b71c1c;
+  margin-left: .3rem;
+}

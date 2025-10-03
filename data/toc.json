@@ -1,0 +1,24 @@
+{
+  "toc": [
+    {
+      "page": 1,
+      "title": "معرفی برند",
+      "thumb": "assets/images/thumbs/01.jpg"
+    },
+    {
+      "page": 2,
+      "title": "محصولات ویژه",
+      "thumb": "assets/images/thumbs/02.jpg"
+    },
+        {
+      "page": 3,
+      "title": "محصولات ویژه",
+      "thumb": "assets/images/thumbs/03.jpg"
+    },
+        {
+      "page": 4,
+      "title": "محصولات ویژه",
+      "thumb": "assets/images/thumbs/04.jpg"
+    }
+  ]
+}
